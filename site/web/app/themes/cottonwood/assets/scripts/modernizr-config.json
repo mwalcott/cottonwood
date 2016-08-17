@@ -1,0 +1,10 @@
+{
+  "minify": false,
+  "options": [
+    "domPrefixes",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/css/mediaqueries"
+  ]
+}

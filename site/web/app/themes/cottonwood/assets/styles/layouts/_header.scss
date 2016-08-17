@@ -1,0 +1,56 @@
+.banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	background: transparent;
+	text-transform: uppercase;
+	background: rgb(255,255,255);
+	background: rgba(255,255,255,.9);
+	@include delay(1s);
+	&.affix {
+		position: fixed;
+		z-index: 20;
+		@include delay(0s);
+	}
+	
+}
+
+a.brand {
+	@extend .pull-left;
+	max-width: 150px;
+	margin: 10px 0 15px;
+	
+	@media (min-width: $screen-sm-min) {
+		max-width: 180px;
+	}
+	@media (min-width: $screen-md-min) {
+		max-width: 248px;
+		margin: 20px 0 25px;
+	}
+}
+
+.social {
+	@extend .pull-right;
+	list-style: none;
+	padding: 0;
+	margin: 5px 12px 0 0;
+	li {
+		display: inline-block;
+	}
+	a {
+		display: block;
+		color: $brand-secondary;
+		padding: 5px;
+	}
+	
+	@media (min-width: $screen-md-min) {
+		margin-top: 12px;
+		margin-right: 20px;
+	}
+}
+
+.nav-primary {
+	clear: both;
+}
