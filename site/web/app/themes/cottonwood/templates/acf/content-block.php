@@ -24,7 +24,7 @@
 		<div class="col-sm-4 equalHeight text-center content-box wow bounceIn<?php echo $animation; ?> box <?php echo $push; ?>">
 			<h2><?php the_sub_field('cb_heading'); ?></h2>
 			<p><?php the_sub_field('cb_content') ?></p>
-			<a class="btn btn-primary" href="<?php the_sub_field('cb_button_text'); ?>">
+			<a class="btn btn-primary" href="<?php the_sub_field('cb_button_link'); ?>">
 				<?php the_sub_field('cb_button_text'); ?>
 			</a>
 			

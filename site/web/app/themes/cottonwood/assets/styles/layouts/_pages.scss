@@ -234,3 +234,109 @@
 	
 }
 
+.blog-wrapper {
+	@include delay(.5s);
+	
+	h2 {
+		background: #A8BAC3;
+		color: #fff;
+		margin-bottom: 10px;
+		padding: 15px 0;
+		font-size: 40px;
+	}
+	
+	.blog-post {
+		margin-bottom: 10px;
+		padding-left: 5px;
+		padding-right: 5px;
+		overflow: hidden;
+		position: relative;
+		.blog-hover {
+			position: absolute;
+			top: 75%;
+			bottom: 0;
+			left: 5px;
+			right: 5px;
+			background: $brand-blue;
+			color: #fff;
+
+			h3 {
+				margin: 15px 30px;
+				font-family: $font;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 26px;
+			}
+
+			@include transition(.5s);
+			.blog-content {
+				height: 0px;
+				overflow: hidden;
+				display: none;
+				@include transition(.5s);
+				
+				p {
+					color: #333;	
+					margin: 0 30px;
+					font-size: 16px;
+					line-height: 20px;
+					margin-bottom: 15px;
+				}
+				
+			}
+
+		}
+		
+		&:hover {
+			
+			.blog-hover {
+				color: #333;
+				top: 0;
+				@include transparent-background(255,255,255,.8);
+				
+				h3 {
+					margin-top: 13%;
+				}
+				
+				.blog-content {
+					height: 100%;
+					display: block;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	.post-background {
+		@include cover();
+		min-height: 35vh;
+	}
+	
+}
+
+.page-banner {
+	min-height: 70vh;
+	padding-top: 98px;
+	@include cover();
+	
+	.banner-content-wrap {
+		@include delay(1.4s);
+	}
+	
+	.banner-content {
+		@include transparent-background(255,255,255,.8);
+		padding-top: 30px;
+		padding-bottom: 30px;
+		p {
+			margin-bottom: 0;
+			font-size: 16px;
+			font-style: normal;
+			font-family: $font;
+			font-weight: 300;
+			padding: 0 30px;
+		}
+	}
+}

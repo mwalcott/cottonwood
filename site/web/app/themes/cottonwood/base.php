@@ -24,7 +24,7 @@ use Roots\Sage\Wrapper;
     
     <?php above_content(); ?>
 
-    <div class="wrap container" role="document">
+    <div class="wrap container-fluid" role="document">
       <div class="content row">
         <main class="main">
           <?php include Wrapper\template_path(); ?>

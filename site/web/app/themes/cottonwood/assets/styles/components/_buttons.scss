@@ -30,6 +30,20 @@
 	}
 }
 
+.btn-blue-outline {
+	border: 2px solid $brand-blue;
+	color: $brand-blue;
+	font-family: $heading-font;
+	text-transform: lowercase;
+	font-style: italic;
+	
+	&:hover {
+		background: $brand-blue;
+		color: #fff;
+	}
+	
+}
+
 .btn-middle {
 	position: absolute;
 	top: 50%;

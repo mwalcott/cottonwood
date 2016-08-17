@@ -159,6 +159,10 @@ function content_acf() {
 			if( get_row_layout() == 'columns' )
 			
 				get_template_part('templates/acf/columns');
+
+			if( get_row_layout() == 'blog' )
+			
+				get_template_part('templates/acf/blog');
 									
 		endwhile;
 	
@@ -169,4 +173,28 @@ function content_acf() {
 endif;
 
 }
-add_action('above_content', __NAMESPACE__ . '\\content_acf');
+add_action('above_content', __NAMESPACE__ . '\\content_acf', 10);
+
+// Page Banner
+function page_banner() { 
+	
+	if( get_field('banner') ) { ?>
+		<div class="container-fluid page-banner text-center wow slideInDown box" style="background-image: url(<?php the_field('banner_background_image'); ?>);">
+			<div class="overlay">
+				<span class="wow fadeInUp box">
+					<?php the_field('banner_heading'); ?>
+				</span>
+				<div class="container banner-content-wrap wow fadeInUp bo">
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-3 banner-content">
+							<?php the_field('banner_content'); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php }
+	
+
+}
+add_action('above_content', __NAMESPACE__ . '\\page_banner', 9);
