@@ -163,6 +163,14 @@ function content_acf() {
 			if( get_row_layout() == 'blog' )
 			
 				get_template_part('templates/acf/blog');
+
+			if( get_row_layout() == 'full_width_content' )
+			
+				get_template_part('templates/acf/full-width');
+
+			if( get_row_layout() == 'image_w_button' )
+			
+				get_template_part('templates/acf/full-width-image');
 									
 		endwhile;
 	

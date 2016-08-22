@@ -9,10 +9,13 @@
 	background: rgb(255,255,255);
 	background: rgba(255,255,255,.9);
 	@include delay(1s);
-	&.affix {
+	&.affix-top {
+		@include delay(1s);
+	}
+	&.affix, {
 		position: fixed;
 		z-index: 20;
-		@include delay(0s);
+		@include delay(1s);
 	}
 	
 }
