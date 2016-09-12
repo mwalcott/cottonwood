@@ -34,3 +34,7 @@ function above_content() {
 function below_content() {
 	do_action('below_content');
 }
+
+function career() {
+	do_action('career');
+}

@@ -171,6 +171,14 @@ function content_acf() {
 			if( get_row_layout() == 'image_w_button' )
 			
 				get_template_part('templates/acf/full-width-image');
+
+			if( get_row_layout() == 'heading_bar' )
+			
+				get_template_part('templates/acf/heading-bar');
+
+			if( get_row_layout() == 'career_tabs' )
+			
+				get_template_part('templates/acf/career-tabs');
 									
 		endwhile;
 	
@@ -182,6 +190,7 @@ endif;
 
 }
 add_action('above_content', __NAMESPACE__ . '\\content_acf', 10);
+add_action('career', __NAMESPACE__ . '\\content_acf', 10);
 
 // Page Banner
 function page_banner() { 
