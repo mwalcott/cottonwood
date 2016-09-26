@@ -20,9 +20,11 @@
       init: function() {
         // JavaScript to be fired on all pages
 
+/*
 $(document).ready(function(){
     $(this).scrollTop(0);
 });
+*/
 
 				new WOW().init();
 
@@ -57,7 +59,40 @@ $(document).ready(function(){
 					  $('.banner').removeClass("animated slideInDown");
 					});
 
+					$('.filter-wrap').affix({
+					  offset: {
+					    top: function() { return $('.page-banner').outerHeight(true); }
+					  }
+					}).on('affix.bs.affix', function () {
+					  $('.filter-wrap').addClass("animated slideInDown");
+					}).on('affix-top.bs.affix', function () {
+					  $('.filter-wrap').removeClass("animated slideInDown");
+					});
+
 				}
+
+				$('#leadership').mixItUp({
+					layout: {
+						display: 'block'
+					},
+					load: {
+						filter: '.senior-executives'
+					}
+				});
+				
+				var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+		    var $bgs = $('.member-info');
+		    $('.mix').click(function () {
+		        var $target = $($(this).data('target')).removeClass('hidden').addClass('animated slideInRight').one(animationend, function() {
+				    $('.member-info').removeClass('animated slideInRight');
+			    });
+		    });
+		    $('.close-info').click(function () {
+			    var $target = $($(this).data('target')).addClass('animated slideOutRight').one(animationend, function() {
+				    $('.member-info').removeClass('animated slideOutRight').addClass('hidden');
+			    });
+		    });
+				
         
       },
       finalize: function() {

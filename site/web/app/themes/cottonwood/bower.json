@@ -9,7 +9,8 @@
   "dependencies": {
     "bootstrap-sass": "3.3.6",
     "wow": "wowjs#^1.1.2",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "mixitup": "^2.1.11"
   },
   "overrides": {
     "bootstrap-sass": {

@@ -17,6 +17,8 @@ $light-grey:						#E4E4E3;
 
 $light-gray:						#e5e7e8;
 
+$white:									#ffffff;
+
 @mixin delay($seconds) {
 	-webkit-animation-delay: 	$seconds; /* Chrome, Safari, Opera */
 	animation-delay: 					$seconds;

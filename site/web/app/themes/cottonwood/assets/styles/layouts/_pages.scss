@@ -474,8 +474,6 @@
 		background: $brand-blue;
 		color: #fff;
 		padding: 30px 0;
-		margin-left: -15px;
-		margin-right: -15px;
 		h2 {
 			margin-bottom: 5px;
 		}
@@ -484,6 +482,10 @@
 			font-weight: 300;
 			margin-bottom: 0;
 		}
+	}
+	.tab-content {
+		margin-left: -15px;
+		margin-right: -15px;
 	}
 	
 	.career-tab-outer {
@@ -550,4 +552,87 @@
 		}
 	}
 	
+}
+
+.heading-bar {
+	color: $white;
+	background: $brand-blue;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#leadership {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 20px;
+	padding-top: 150px;
+	.row {
+		position: relative;
+	}
+	.mix {
+		display: none;
+		position: relative;
+		margin-bottom: 30px;
+	}
+	
+	.member-info {
+		position: absolute;
+		top: 0;
+		right: 15px;
+		left: 15px;
+		z-index: 10;
+		background: #ba2000;
+		//bottom: 0;
+	}
+	
+}
+.filter-wrap {
+		background: $light-grey;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		&.affix {
+			position: fixed;
+			top: 98px;
+		}
+		a.filter {
+			display: block;
+			text-transform: uppercase;
+			float: left;
+			width: 33.3333%;
+			color: $brand-blue;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 24px;
+			cursor: pointer;
+			text-decoration: none;
+			padding: 20px 0;
+			letter-spacing: 2px;
+			&:hover {
+				cursor: pointer;	
+			}
+			&.active {
+				position: relative;
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -9px;
+					left: 50%;
+					z-index: 200;
+					margin-left: -10px;
+					width: 0; 
+				  height: 0; 
+				  border-left: 10px solid transparent;
+				  border-right: 10px solid transparent;
+				  
+				  border-top: 10px solid $light-grey;
+				}
+				
+			}
+		}	
 }
