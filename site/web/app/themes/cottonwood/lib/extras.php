@@ -64,36 +64,16 @@ function slider() { ?>
 	<div id="carousel-example-generic" class="carousel slide gallery wow slideInDown box" data-ride="carousel">
 		<div class="overlay">
 			<span class="wow fadeInUp box">
-				home at last
+				<?php the_field('overlay_text'); ?>
 			</span>	    
 		</div>
 				
-	  <!-- Wrapper for slides -->
-	  <div class="carousel-inner" role="listbox">
-	
-			<?php 
-			
-			$images = get_field('slider_images');
-			
-			if( $images ): 
-			$i = 0;
-			
-			?>
-				<?php foreach( $images as $image ): $i++; ?>
-					<?php
-						$active = '';
-						if($i == 1) {
-							$active = 'active';
-						}
-					?>
-					<div class="item <?php echo $active; ?>">
-						<img src="<?php echo $image['url']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>" />
-					</div>
-				<?php endforeach;  ?>
-			<?php endif; ?>
-	
-	  </div>
-	  
+	  <!-- Video -->
+		<video poster="<?php the_field('video_poster'); ?>" id="bgvid" playsinline autoplay muted loop>
+			<source src="<?php the_field('webm'); ?>" type="video/webm">
+			<source src="<?php the_field('mp4'); ?>" type="video/mp4">
+		</video>	 
+		 
 		<!-- Start quick_search -->
     <div class="quick_search wow fadeInUp box">
 	    <div class="container">

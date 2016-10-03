@@ -11,8 +11,10 @@
 				if( $i == 1 ) {
 					$active = 'active';
 				}
-			  echo '<a class="filter '. $active .'" data-filter=".'. $term->slug .'">' . $term->name . '</a>';
-			  
+			  echo '<a class="filter '. $active .'" data-filter=".'. $term->slug .'">';
+			 		echo $term->name;
+			 		echo '<i class="'. get_field('icon_class', $term) .'"></i>';
+			  echo '</a>';
 			  $i++;
 			}
 		}
@@ -55,17 +57,17 @@
 				<a class="open-member-info" href="#FIXME">
 					<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive wow zoomIn') ); ?>
 				</a>
-			</div>
-			<div class="member-info hidden <?php echo $post_slug; ?>">
-				<div class="row">
-					<div class="col-sm-4">
-						<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive') ); ?>
-					</div>
-					<div class="col-sm-8">
-						<a class="close-info" data-target=".<?php echo $post_slug; ?>">Close</a>
-						<h3><?php the_title(); ?></h3>
-						<cite><?php the_field('position'); ?></cite>
-						<?php the_content(); ?>
+				<div class="member-info hidden <?php echo $post_slug; ?>">
+					<div class="row">
+						<div class="col-sm-4">
+							<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive') ); ?>
+						</div>
+						<div class="col-sm-8">
+							<a class="close-info" data-target=".<?php echo $post_slug; ?>">Close</a>
+							<h3><?php the_title(); ?></h3>
+							<cite><?php the_field('position'); ?></cite>
+							<?php the_content(); ?>
+						</div>
 					</div>
 				</div>
 			</div>

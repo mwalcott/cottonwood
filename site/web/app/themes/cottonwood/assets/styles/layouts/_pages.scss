@@ -1,3 +1,14 @@
+video { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+}
 .gallery {
 	
 	overflow: hidden;
@@ -198,8 +209,8 @@
 	
 	P {
 		margin-bottom: 30px;
-		font-size: 16px;
-		line-height: 24px;
+		font-size: 20px;
+		line-height: 28px;
 		font-weight: 300;
 	}
 
@@ -364,7 +375,8 @@
 		padding-bottom: 30px;
 		p {
 			margin-bottom: 0;
-			font-size: 16px;
+			font-size: 20px;
+			line-height: 28px;
 			font-style: normal;
 			font-family: $font;
 			font-weight: 300;
@@ -391,8 +403,8 @@
 		
 		p {
 			padding: 0 30px;
-			font-size: 18px;
-			line-height: 26px;
+			font-size: 20px;
+			line-height: 28px;
 			font-weight: 300;
 			&:last-child {
 				margin-bottom: 0;
@@ -634,5 +646,22 @@
 				}
 				
 			}
+			
+			i {
+				display: block;
+				font-size: 60px;
+				color: $brand-orange;
+				margin: 20px 0 0;
+			}
+
+/*
+			&[data-filter=".property-management"] {
+				i {
+					font-size: 60px;
+					padding-top: 0;	
+				}
+			}
+*/
+
 		}	
 }
