@@ -5,6 +5,7 @@ web/app/plugins/*
 !web/app/plugins/gravityforms/
 !web/app/plugins/wp-migrate-db-pro-media-files/
 !web/app/plugins/wp-migrate-db-pro/
+!web/app/plugins/real-estate-listing-realtyna-wpl-pro/
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
