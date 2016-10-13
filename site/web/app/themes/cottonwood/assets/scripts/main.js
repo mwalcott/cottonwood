@@ -93,45 +93,6 @@ $(document).ready(function(){
 			    });
 		    });
 
-function new_map( $el ) {
-	
-	// var
-	var $markers = $el.find('.marker');
-	
-	
-	// vars
-	var args = {
-		zoom		: 16,
-		center		: new google.maps.LatLng(0, 0),
-		mapTypeId	: google.maps.MapTypeId.ROADMAP
-	};
-	
-	
-	// create map	        	
-	var map = new google.maps.Map( $el[0], args);
-	
-	
-	// add a markers reference
-	map.markers = [];
-	
-	
-	// add markers
-	$markers.each(function(){
-		
-    	add_marker( $(this), map );
-		
-	});
-	
-	
-	// center map
-	center_map( map );
-	
-	
-	// return
-	return map;
-	
-}
-
 function add_marker( $marker, map ) {
 
 	// var
@@ -180,7 +141,7 @@ function center_map( map ) {
 	});
 
 	// only 1 marker?
-	if( map.markers.length == 1 )
+	if( map.markers.length === 1 )
 	{
 		// set center of map
 	    map.setCenter( bounds.getCenter() );
@@ -193,6 +154,46 @@ function center_map( map ) {
 	}
 
 }
+
+function new_map( $el ) {
+	
+	// var
+	var $markers = $el.find('.marker');
+	
+	
+	// vars
+	var args = {
+		zoom		: 16,
+		center		: new google.maps.LatLng(0, 0),
+		mapTypeId	: google.maps.MapTypeId.ROADMAP
+	};
+	
+	
+	// create map	        	
+	var map = new google.maps.Map( $el[0], args);
+	
+	
+	// add a markers reference
+	map.markers = [];
+	
+	
+	// add markers
+	$markers.each(function(){
+		
+    	add_marker( $(this), map );
+		
+	});
+	
+	
+	// center map
+	center_map( map );
+	
+	
+	// return
+	return map;
+	
+}
+
 
 	$('.acf-map').each(function(){
 
