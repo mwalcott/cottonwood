@@ -47,6 +47,7 @@
     "wpackagist-plugin/regenerate-thumbnails": "2.2.6",
     "wpackagist-plugin/user-role-editor": "4.27.2",
     "wpackagist-plugin/duplicate-post": "2.6",
+    "wpackagist-plugin/simple-share-buttons-adder": "6.3.1",
     "roots/soil": "3.7.0"
   },
   "require-dev": {

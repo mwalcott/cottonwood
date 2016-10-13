@@ -38,3 +38,9 @@ function below_content() {
 function career() {
 	do_action('career');
 }
+
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyB6KHGjF2QUSS1tp95ioOjJztty7BkOE-k');
+}
+add_action('acf/init', 'my_acf_init');

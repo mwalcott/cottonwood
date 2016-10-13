@@ -175,7 +175,23 @@ add_action('career', __NAMESPACE__ . '\\content_acf', 10);
 // Page Banner
 function page_banner() { 
 	
-	if( get_field('banner') ) { ?>
+	if( is_home() || is_single() || is_search() ) { ?>
+		<div class="container-fluid page-banner text-center wow slideInDown box" style="background-image: url(<?php the_field('banner_background_image', 15); ?>);">
+			<div class="overlay">
+				<span class="wow fadeInUp box">
+					<?php the_field('banner_heading', 15); ?>
+				</span>
+				<div class="container banner-content-wrap wow fadeInUp bo">
+					<div class="row">
+						<?php get_search_form(); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php }
+	
+	if( get_field('banner') ) { 
+	?>
 		<div class="container-fluid page-banner text-center wow slideInDown box" style="background-image: url(<?php the_field('banner_background_image'); ?>);">
 			<div class="overlay">
 				<span class="wow fadeInUp box">

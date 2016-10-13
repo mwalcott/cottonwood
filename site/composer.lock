@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e3e4d29db45ecce7c6c01b371ae60e15",
-    "content-hash": "90b096e31051b50696b250b066550d46",
+    "hash": "a801b969a8ada1fa4e791af5b935086e",
+    "content-hash": "b5b0851165939e7e66fd5ec62503c1ff",
     "packages": [
         {
             "name": "composer/installers",
@@ -522,6 +522,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/simple-share-buttons-adder",
+            "version": "6.3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/simple-share-buttons-adder/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-share-buttons-adder.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simple-share-buttons-adder/"
         },
         {
             "name": "wpackagist-plugin/user-role-editor",
