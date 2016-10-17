@@ -588,6 +588,13 @@ video {
 		display: none;
 		position: relative;
 		margin-bottom: 30px;
+		overflow: auto;
+/*
+		&:hover {
+			@extend .animated;
+			@extend .flipOutY;
+		}
+*/
 	}
 	
 	.member-info {
@@ -596,8 +603,9 @@ video {
 		right: 15px;
 		left: 15px;
 		z-index: 10;
-		background: #ba2000;
-		//bottom: 0;
+		background: $white;
+		bottom: 0;
+		padding: 20px;
 	}
 	
 }

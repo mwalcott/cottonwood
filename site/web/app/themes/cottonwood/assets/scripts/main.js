@@ -81,17 +81,25 @@ $(document).ready(function(){
 				});
 				
 				var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-		    var $bgs = $('.member-info');
-		    $('.mix').click(function () {
-		        var $target = $($(this).data('target')).removeClass('hidden').addClass('animated slideInRight').one(animationend, function() {
-				    $('.member-info').removeClass('animated slideInRight');
+		    //var $bgs = $('.member-info');
+		    $('.mix').hover(function () {
+					
+		      var $target = $($(this).data('target')).removeClass('hidden').addClass('animated flipInY').one(animationend, function() {
+				  	$('.member-info').removeClass('animated flipInY');
+			    });
+		    },
+		    function () {
+		      var $target = $($(this).data('target')).removeClass('hidden').addClass('animated flipOutY hidden').one(animationend, function() {
+				  	$('.member-info').removeClass('animated flipOutY');
 			    });
 		    });
+/*
 		    $('.close-info').click(function () {
 			    var $target = $($(this).data('target')).addClass('animated slideOutRight').one(animationend, function() {
 				    $('.member-info').removeClass('animated slideOutRight').addClass('hidden');
 			    });
 		    });
+*/
 
 function add_marker( $marker, map ) {
 

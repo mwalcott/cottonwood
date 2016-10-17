@@ -59,11 +59,12 @@
 				</a>
 				<div class="member-info hidden <?php echo $post_slug; ?>">
 					<div class="row">
+<!--
 						<div class="col-sm-4">
 							<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive') ); ?>
 						</div>
-						<div class="col-sm-8">
-							<a class="close-info" data-target=".<?php echo $post_slug; ?>">Close</a>
+-->
+						<div class="col-sm-12">
 							<h3><?php the_title(); ?></h3>
 							<cite><?php the_field('position'); ?></cite>
 							<?php the_content(); ?>
