@@ -22,14 +22,22 @@
 				$tab_nav_query->the_post();
 				$post_slug = $post->post_name; 
 				$active = '';
+				$icon = '';
 				if($i == 1) {
-					$active = 'active';	
+					$active = 'active';
+					$icon = 'users';	
+				} elseif($i == 2) {
+					$icon = 'benefits';
+				} else {
+					
 				}
+				
+				
 				
 				?>
 					<li role="presentation" class="<?php echo $active; ?>">
-						<?php //echo $i; ?>
 						<a href="#<?php echo $post_slug; ?>" aria-controls="<?php echo $post_slug; ?>" role="tab" data-toggle="tab">
+							<i class="icon-<?php echo $icon; ?>"></i>
 							<?php the_title();?>
 						</a>
 					</li>
@@ -39,7 +47,7 @@
 					<li role="presentation">
 						<?php //echo $i; ?>
 						<a target="_blank" href="https://basalt.peopleanswers.com/pa/testPortalEntry.do?pc=992507&src=185087">
-							<i></i>
+							<i class="icon-apply"></i>
 							Apply Online
 						</a>
 					</li>

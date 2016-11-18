@@ -67,7 +67,7 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Blog', 'sage'),
     'id'            => 'sidebar-blog',
-    'before_widget' => '<section class="widget %1$s %2$s">',
+    'before_widget' => '<section class="widget %1$s %2$s clearfix">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'

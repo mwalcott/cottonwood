@@ -28,9 +28,14 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+  return '...';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+function custom_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', __NAMESPACE__ . '\\custom_excerpt_length', 999 );
 
 if( function_exists('acf_add_options_page') ) {
 	
@@ -159,6 +164,10 @@ function content_acf() {
 			if( get_row_layout() == 'career_tabs' )
 			
 				get_template_part('templates/acf/career-tabs');
+
+			if( get_row_layout() == 'quote' )
+			
+				get_template_part('templates/acf/quote');
 									
 		endwhile;
 	
@@ -175,7 +184,7 @@ add_action('career', __NAMESPACE__ . '\\content_acf', 10);
 // Page Banner
 function page_banner() { 
 	
-	if( is_home() || is_single() || is_search() ) { ?>
+	if( is_home() || is_search() ) { ?>
 		<div class="container-fluid page-banner text-center wow slideInDown box" style="background-image: url(<?php the_field('banner_background_image', 15); ?>);">
 			<div class="overlay">
 				<span class="wow fadeInUp box">

@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-sm-8 col-sm-offset-2">
-		<a href="/blog"><i class="icon-arrow-left"></i> Blog Home</a>
+		<a class="back-blog" href="/blog"><i class="icon-arrow-left"></i> Blog Home</a>
 	</div>
 </div>
 <div class="row">
