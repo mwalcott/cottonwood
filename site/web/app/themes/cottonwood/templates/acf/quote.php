@@ -6,7 +6,7 @@
 				<?php the_sub_field('quote_text') ?>
 				
 				<div class="row author">
-					<div class="col-sm-8 col-sm-offset-2 text-left">
+					<div class="col-sm-8 col-sm-offset-2">
 					<?php the_sub_field('quote_name') ?><br />
 					<?php the_sub_field('quote_title') ?>	
 					</div>				

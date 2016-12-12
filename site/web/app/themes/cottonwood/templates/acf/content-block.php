@@ -49,7 +49,7 @@
 		
 	</div>
 	<div class="row">
-		<div class="<?php echo $colContentWidth; ?> equalHeight text-center content-box <?php echo $contentBox; ?> wow bounceIn<?php echo $animation; ?> box <?php echo $push; ?>">
+		<div class="<?php echo $colContentWidth; ?> same-height text-center content-box <?php echo $contentBox; ?> wow bounceIn<?php echo $animation; ?> box <?php echo $push; ?>">
 			<?php 
 				
 				
@@ -80,7 +80,7 @@
 			?>
 			
 		</div>
-		<div class="<?php echo $colImageWidth; ?> equalHeight button-wrap wow bounceIn<?php echo $animationReverse; ?> box <?php echo $pull; ?>">
+		<div class="<?php echo $colImageWidth; ?> same-height button-wrap wow bounceIn<?php echo $animationReverse; ?> box <?php echo $pull; ?>">
 
 			<?php 
 				// Button Outline Link Start

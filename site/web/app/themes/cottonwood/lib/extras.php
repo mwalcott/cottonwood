@@ -74,7 +74,7 @@ function slider() { ?>
 		</div>
 				
 	  <!-- Video -->
-		<video poster="<?php the_field('video_poster'); ?>" id="bgvid" playsinline autoplay muted loop>
+		<video poster="<?php //the_field('video_poster'); ?>" id="bgvid" playsinline autoplay muted loop>
 			<source src="<?php the_field('webm'); ?>" type="video/webm">
 			<source src="<?php the_field('mp4'); ?>" type="video/mp4">
 		</video>	 

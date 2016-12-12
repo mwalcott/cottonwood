@@ -101,6 +101,11 @@ $(document).ready(function(){
 		    });
 */
 
+
+$(function() {
+    $('.same-height').matchHeight();
+});
+
 function add_marker( $marker, map ) {
 
 	// var
