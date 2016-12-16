@@ -27,6 +27,7 @@
     dest: "{{ project_source_path }}"
     version: "{{ project_version }}"
     accept_hostkey: yes
+    force: yes
   ignore_errors: true
   no_log: true
   register: git_clone
