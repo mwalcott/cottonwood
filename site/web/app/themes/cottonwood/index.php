@@ -6,8 +6,13 @@
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>
-<?php dynamic_sidebar('sidebar-blog'); ?>
-<div class="blog-wrapper">
+		<div class="col-sm-6 col-sm-offset-3">
+			<div class="row">
+			<?php dynamic_sidebar('sidebar-blog'); ?>			
+			</div>
+		</div>
+
+<div class="blog-wrapper col-sm-6 col-sm-offset-3">
 <div class="row">
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>

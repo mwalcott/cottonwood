@@ -28,12 +28,12 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return '...';
+	return '... <a href="'.get_the_permalink().'">read more</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 function custom_excerpt_length( $length ) {
-	return 15;
+	return 30;
 }
 add_filter( 'excerpt_length', __NAMESPACE__ . '\\custom_excerpt_length', 999 );
 
@@ -82,6 +82,8 @@ function slider() { ?>
 		<!-- Start quick_search -->
     <div class="quick_search wow fadeInUp box">
 	    <div class="container">
+		    <?php dynamic_sidebar('sidebar-primary'); ?>
+<!--
 				<form id="quick_search">
 					<div class="search_wrap row">
 				    <div class="col-sm-3 cta">
@@ -99,6 +101,7 @@ function slider() { ?>
 					</div>
 					<div id="search_error" class="search_error">Please enter city, state, or zip code.</div>
 				</form>			    
+-->
     	</div>
     </div>
     <!-- End quick_search -->	  

@@ -1,12 +1,10 @@
-<article <?php post_class( 'col-sm-4 blog-post text-center' ); ?>>
-	<div class="post-background" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-		<div class="blog-hover">
+<article <?php post_class( 'col-sm-12 blog-post' ); ?>>
+	<div class="post-background">
+		<div class="">
 			<h3><?php the_title(); ?></h3>
+			<?php the_post_thumbnail('large', array( 'class' => 'img-responsive' ) ); ?>
 			<div class="blog-content">
 				<?php the_excerpt(); ?>
-				<a class="btn btn-blue-outline btn-lg" href="<?php the_permalink(); ?>">
-					read more
-				</a>
 			</div>
 		</div>
 	</div>

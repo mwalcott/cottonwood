@@ -312,7 +312,8 @@ body.home {
 article.post {
 	position: relative;
 	padding-bottom: 50px;
-	h1 {
+	h1,
+	h3 {
 		font-family: $font;
 		color: $brand-blue;
 		font-weight: 700;
@@ -426,70 +427,6 @@ article.post {
 		min-height: 300px;
 	}
 	
-}
-
-.blog {
-	.page-banner {
-		padding-top: 10%;
-		padding-bottom: 5%;
-		input[type="text"] {
-			font-family: $font !important;
-			font-style: normal;
-			min-width: 300px;
-			text-align: center;
-			padding: 10px 10px;
-			border: none;
-			font-weight: 700;
-			@include transparent-background(255,255,255,1);
-		}
-		::-webkit-input-placeholder {
-			color: $brand-blue !important;
-		}
-		:-moz-placeholder { /* older Firefox*/
-			color: $brand-blue !important;
-		}
-		::-moz-placeholder { /* Firefox 19+ */ 
-			color: $brand-blue !important;
-		} 
-		:-ms-input-placeholder { 
-			color: $brand-blue !important;
-		}
-	
-	}
-	
-	.widget_categories {
-		padding: 15px 20px;
-		font-family: $font;
-		h3 {
-			margin: 0 20px 0 0;
-			float: left;
-			font-family: $font;
-			font-size: 14px;
-			line-height: 30px;
-			font-style: normal;
-			font-weight: 500;
-			text-transform: uppercase;
-		}
-		ul {
-			margin: 0; 
-			float: left;
-			border-bottom: 1px solid #96ACB9;
-			li {
-				float: left;
-				display: block;
-				font-size: 14px;
-				line-height: 30px;
-				text-transform: uppercase;
-				margin-right: 20px;
-				&:last-child {
-					margin-right: 0;
-				}
-				a {
-					color: $brand-orange;
-				}
-			}
-		}
-	}
 }
 
 .page-banner {

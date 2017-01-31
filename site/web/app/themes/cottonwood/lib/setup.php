@@ -99,6 +99,7 @@ function display_sidebar() {
     is_single(),
     is_page(),
     is_search(),
+    is_archive(),
     is_page_template('template-custom.php'),
   ]);
 
